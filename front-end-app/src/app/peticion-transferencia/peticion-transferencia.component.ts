@@ -51,7 +51,7 @@ export class PeticionTransferenciaComponent implements OnInit {
     });
   }
   seleccionar(indice) {
-    let url = ['/perfil'];
+    let url: ['/perfil'];
     this._router.navigate(url);
   }
 }
