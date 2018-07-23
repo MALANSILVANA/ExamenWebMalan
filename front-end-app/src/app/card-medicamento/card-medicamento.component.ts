@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {medicamentos} from "../medicamento/medicamento.servicio";
-import {HttpClient} from "@angular/common/http";
+import {medicamentos} from '../medicamento/medicamento.servicio';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-card-medicamento',
@@ -12,7 +12,7 @@ export class CardMedicamentoComponent implements OnInit {
   @Input()nombre;
   @Input()urlImagen;
   @Input()usadoPara;
-  medicamento:medicamentos[];
+  medicamento: medicamentos[];
 
   constructor(private http: HttpClient) { }
 
