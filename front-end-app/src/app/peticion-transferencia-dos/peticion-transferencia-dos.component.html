@@ -1,0 +1,19 @@
+<app-peticion-por-aceptar *ngFor="let info of peticion"
+[nombreUsuario]="detalleUsuario.nombre"
+                          [urlUsuario]="detalleUsuario.url"
+                          [nombreMedicamento]="medicamento[0].nombre"
+                          [urlMedicamento]="medicamento[0].urlMedicamento"
+                          [usadoPara]="medicamento[0].usadoPara"
+                          [nombreMedicamentoDos]="detalleMedicamento.nombreMed"
+                          [urlMedicamentoDos]="detalleMedicamento.url"
+                          [usadoParaDos]="detalleMedicamento.usado"
+></app-peticion-por-aceptar>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4"> </div>
+    <div class="col-sm-4">
+      <button type="button" class="btn btn-success" (click)="cargarMas()">Cargar mas</button>
+    </div>
+    <div class="col-sm-4"> </div>
+  </div>
+</div>
