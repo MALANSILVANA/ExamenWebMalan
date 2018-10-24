@@ -17,8 +17,4 @@ export class UsuarioEntity {
 
   @OneToMany(type => PacienteEntity, userPaciente => userPaciente.pacienteId)
   userPaciente: PacienteEntity[];
-
-  @ManyToOne(type => PeticionesEntity, peticionId => peticionId.userPeticion)
-  peticion: PeticionesEntity;
-
 }

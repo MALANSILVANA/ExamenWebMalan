@@ -25,14 +25,16 @@ verificar;
 
     this.http.get<User[]>('http://localhost:3000/usuario/' + parametro).subscribe((data: User[]) => {
       this.usuario = data;
-      if (this.usuario[0].correo === this.correo) {
+      this.usuario.map(value =>  {
+        if (value.correo = this.correo) {
         let url = ['/principal'];
         this._router.navigate(url);
-        this.cookieService.set( 'user', '' + this.usuario[0].nombreUsuario );
-        this.cookieService.set( 'url', '' + this.usuario[0].urlUsuario );
+        this.cookieService.set( 'user', '' + value.nombreUsuario );
+        this.cookieService.set( 'url', '' + value.urlUsuario );
         this.service.emitirCambio(this.usuario[0]);
-      }
-    });
+        }
+      });
+      });
 
 
 
